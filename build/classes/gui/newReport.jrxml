@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dbe49348-9728-4cfc-af07-de82c8e66266">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from registrar]]>
+	</queryString>
+	<field name="id_regisro" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DNI" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="multa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="monto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="correo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="201" y="19" width="109" height="32" uuid="8d43ef39-2549-4485-b9e2-1b8c823e2dc3"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[MULTAS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="69" y="12" width="100" height="20" uuid="ea580826-1bab-44ef-a8bd-d943d2eb8fb6"/>
+				<text><![CDATA[DNI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="12" width="100" height="20" uuid="815a895b-269a-43e3-9618-420793ad8879"/>
+				<text><![CDATA[multa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="12" width="100" height="20" uuid="f5c7fe4b-7979-451d-b353-30f08dda2ca3"/>
+				<text><![CDATA[monto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="12" width="100" height="20" uuid="7474b626-b1e8-463f-ae71-52d18ce552e4"/>
+				<text><![CDATA[correo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="12" width="100" height="20" uuid="3d01732d-85f6-44df-baa8-f2c465887596"/>
+				<text><![CDATA[id_registro]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="69" y="18" width="100" height="20" uuid="babe0ec0-c04f-48a3-98ec-956f7e716adf"/>
+				<textFieldExpression><![CDATA[$F{DNI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="11" width="100" height="20" uuid="cbeafbd6-90cf-4577-b319-95c7ff6f1395"/>
+				<textFieldExpression><![CDATA[$F{multa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="309" y="9" width="100" height="20" uuid="cdd028ae-f6a0-4649-ba04-6a6460cdcd49"/>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="12" width="100" height="20" uuid="d83de5d5-1ce6-4b30-ac38-7b3f05c3f92a"/>
+				<textFieldExpression><![CDATA[$F{correo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="12" width="100" height="20" uuid="0223835e-6298-4bcf-bcaf-41d50ed75052"/>
+				<textFieldExpression><![CDATA[$F{id_regisro}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
